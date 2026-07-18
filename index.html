@@ -233,7 +233,9 @@
         /* Hero Banner Utama */
         header {
             margin-top: 48px;
-            background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.75)), url('banner.jpg , banner.png') no-repeat center center/cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
             background-color: #1e293b;
             color: #ffffff;
             padding: 5rem 1rem;
@@ -595,6 +597,7 @@
         light: {
             nama: "SINAR SAMUDERA RESORT",
             logo: "logo-matahari.png",
+            banner: "banner.jpg",
             tagline: "Pengalaman Penginapan Eksklusif & Mewah di Tanah Bencah",
             welcomeTitle: "Selamat Datang ke Sinar Samudera Resort",
             welcomeDesc: "Selamat datang ke portal rasmi Sinar Samudera Resort & Spa. Nikmati keindahan alam semula jadi dengan sentuhan kemewahan bertaraf antarabangsa. Sila gunakan menu ℎ𝑎𝑚𝑏𝑢𝑟𝑔𝑒𝑟 (ikon tiga garis melintang) di penjuru kanan atas untuk meneroka pilihan bilik eksklusif, senarai aktiviti menarik, serta kemudahan premium yang kami sediakan khas untuk anda.",
@@ -666,6 +669,7 @@
         dark: {
             nama: "ASTANA SINAR KEJORA HOTEL",
             logo: "logo-grand.png",
+            banner: "banner.png",
             tagline: "Kemewahan Bertemu Ketenangan di Astana Sinar Kejora Hotel",
             welcomeTitle: "Selamat Datang ke Astana Sinar Kejora Hotel",
             welcomeDesc: "Daripada lobi kami yang gah hinggalah kebilik penginapan yang dilengkapi perabot eksklusif, setiap perincian di Astana Sinar Kejora memancarkan nilai keanggunan. Bukan sahaja menawarkan tempat bermalam, malah sebuah pusat perhentian di mana anda boleh bekerja dan menikmati hidangan-hidangan istimewa bertaraf antarabangsa di restoran kami.",
@@ -808,6 +812,7 @@
         window.history.pushState({ path: urlBaharu }, '', urlBaharu);
 
         // Tukar hiasan asas & butiran teks
+        document.getElementById("mainHeader").style.backgroundImage = `linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.75)), url('${data.banner}')`;
         document.getElementById("logoText").innerText = data.nama;
         document.getElementById("headerTagline").innerText = data.tagline;
         document.getElementById("welcomeTitle").innerText = data.welcomeTitle;
